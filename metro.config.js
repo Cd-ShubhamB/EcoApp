@@ -5,5 +5,6 @@ const config = getDefaultConfig(__dirname);
 
 module.exports = withNativeWind(config, {
   input: "./app/globals.css",
-  experimental: { useLightningCss: false } // disable Windows-only transformer
+  experimental: { useLightningCss: false }, // keep false
+  unstable_disablePackageManagerCheck: true, // prevents some native warnings
 });
